@@ -12,7 +12,7 @@ VitrineController.criarTemplate(response)
 
 const nav = document.getElementById("filtros")
 const input = document.getElementById("input")
-// const pesquisa = document.getElementById("pesquisa")
+const pesquisa = document.getElementById("pesquisa")
 const campoPesquisa = document.querySelector('.campoPesquisa')
 
 
@@ -36,13 +36,10 @@ nav.addEventListener("click", (e) => {
     }
 })
 
-campoPesquisa.addEventListener("keydown", () => {
+campoPesquisa.addEventListener("keyup", (e) => {
+    let valorBusca = input.value
 
-    let valorBusca = input.value.toLowerCase()
-    console.log(valorBusca);
-
-    valorBusca = valorBusca[0].toUpperCase() + valorBusca.substr(1)
-    VitrineController.criarTemplate(Filtros.busca(valorBusca, response))
+       Filtros.busca(valorBusca, response)
 })
 
 

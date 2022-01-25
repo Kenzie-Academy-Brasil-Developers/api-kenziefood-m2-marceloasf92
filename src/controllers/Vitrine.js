@@ -5,8 +5,8 @@ class VitrineController {
 
         const vitrinePrincipal = document.querySelector('.vitrinePrincipal')
         vitrinePrincipal.innerHTML = ""
-
-        data.forEach(({ id, nome, preco, categoria, descricao, imagem }) => {
+        if(data !== undefined){
+            data.forEach(({ id, nome, preco, categoria, descricao, imagem }) => {
 
             const listaProdutos = document.createElement('ul')
             listaProdutos.id = 'listaProdutos';
@@ -33,9 +33,8 @@ class VitrineController {
 
 
         });
-
-
-
+        }
+    
     }
 }
 

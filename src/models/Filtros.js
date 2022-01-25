@@ -1,3 +1,5 @@
+import { VitrineController } from "../controllers/Vitrine.js"
+
 class Filtros {
 
     static panificadora(data) {
@@ -33,16 +35,28 @@ class Filtros {
     }
 
     static busca(valor, data) {
-        let produtosfiltrados = []
-        for (let i = 0; i < data.length; i++) {
-            if (data[i].categoria === valor) {
-                produtosfiltrados.push(data[i])
-            } else if (data[i].nome == valor) {
-                produtosfiltrados.push(data[i])
-            }
-        }
 
-        return produtosfiltrados
+        valor = valor.toLowerCase()
+        valor = valor[0].toUpperCase() + valor.substr(1).trim()
+
+        let produtosfiltrados = []
+
+
+        let result = data.find(e => e.categoria.includes(valor))
+        produtosfiltrados.push(result)
+
+
+        // for (let i = 0; i < data.length; i++) {
+        //     if (data[i].categoria === valor) {
+        //         produtosfiltrados.push(data[i])
+        //     } else if (data[i].nome == valor) {
+        //         produtosfiltrados.push(data[i])
+        //     }
+        // }
+
+
+            VitrineController.criarTemplate(produtosfiltrados)
+            produtosfiltrados = []
     }
 }
 
