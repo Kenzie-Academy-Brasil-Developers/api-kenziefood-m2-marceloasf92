@@ -39,7 +39,8 @@ header {
 }
 
 #listaProdutos li figure img {
-    width: 300px;
+    width: 250px;
+    height: 200px;
 }
 
 figcaption {
@@ -53,12 +54,15 @@ figcaption {
 .vitrinePrincipal {
     display: flex;
     list-style: none;
+    width: 800px;
+    flex-wrap: wrap;
 }
 
 #listaProdutos {
     display: flex;
     width: 300px;
     list-style: none;
+    
 }
 
 #listaProdutos li {
@@ -78,6 +82,7 @@ p {
 span {
     font-weight: bold;
     margin: 5px;
+    font-size: 19px;
 }
 
 form {
@@ -89,9 +94,42 @@ form {
 
 nav {
     padding: 10px;
+    margin-bottom: 50px;
 }
 
 main {
     display: flex;
+    justify-content: center;
 }
 
+
+.carrinho img {
+    width: 20px;
+    margin-left: 40px;
+    margin-right: 20px;
+}
+
+.carrinhoVazio img {
+    width: 70px;
+}
+
+.carrinhoDeCompras {
+    background-color: rgb(221, 217, 217);
+    width: 300px;
+    height: 400px;
+    display: flex;
+    /* margin-left: 200px; */
+    flex-direction: column;
+}
+
+.carrinho {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    background-color: hotpink;
+}
+
+.carrinhoVazio {
+    text-align: center;
+    margin-top: 100px;
+}
