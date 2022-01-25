@@ -2,46 +2,45 @@ import { db } from "../mock/db.js";
 
 class filtros{
 
-    static panificadora(){
+    static panificadora(data){
     let produtosfiltrados = []
-        for(let i = 0; i < db.length; i++){
-            if(db[i].categoria === "Panificadora"){
-                produtosfiltrados.push(db[i])
+        for(let i = 0; i < data.length; i++){
+            if(data[i].categoria === "Panificadora"){
+                produtosfiltrados.push(data[i])
             }
         }
         return produtosfiltrados
     }
 
-    static frutas(){
+    static frutas(data){
         let produtosfiltrados = []
-            for(let i = 0; i < db.length; i++){
-                if(db[i].categoria === "Frutas"){
-                    produtosfiltrados.push(db[i])
+            for(let i = 0; i < data.length; i++){
+                if(data[i].categoria === "Frutas"){
+                    produtosfiltrados.push(data[i])
                 }
             }
 
             return produtosfiltrados
         }
 
-    static bebidas(){
+    static bebidas(data){
         let produtosfiltrados = []
-            for(let i = 0; i < db.length; i++){
-                if(db[i].categoria === "Bebidas"){
-                    produtosfiltrados.push(db[i])
+            for(let i = 0; i < data.length; i++){
+                if(data[i].categoria === "Bebidas"){
+                    produtosfiltrados.push(data[i])
                 }
             }
 
             return produtosfiltrados
         }
 
-    static busca(valor){
+    static busca(valor, data){
         let produtosfiltrados = []
-        console.log(valor)
-        for(let i = 0; i < db.length; i++){
-            if(db[i].categoria === valor){
-                produtosfiltrados.push(db[i])
-            }else if(db[i].nome == valor){
-                produtosfiltrados.push(db[i])
+        for(let i = 0; i < data.length; i++){
+            if(data[i].categoria === valor){
+                produtosfiltrados.push(data[i])
+            }else if(data[i].nome == valor){
+                produtosfiltrados.push(data[i])
             }
         }
 
