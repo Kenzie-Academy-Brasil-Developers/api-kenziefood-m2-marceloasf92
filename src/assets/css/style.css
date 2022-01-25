@@ -1,0 +1,97 @@
+body {
+    width: 100%;
+}
+
+header {
+    display: flex;
+    padding: 10px;
+    border-bottom: 1px solid black;
+}
+
+.cabeçalho {
+    display: flex;
+    width: 100%;
+    padding: 10px;
+}
+
+.cabeçalho img {
+    width: 50px;
+}
+
+
+#filtros ul li button img {
+    width: 15px;
+    height: auto;
+    margin-right: 4px;
+}
+
+#filtros ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+#filtros button {
+    margin: 10px;
+    height: 20px;
+    text-align: center;
+    display: flex;
+}
+
+#listaProdutos li figure img {
+    width: 300px;
+}
+
+figcaption {
+    display: none;
+}
+
+#listaProdutos li div button img {
+    width: 15px;
+}
+
+.vitrinePrincipal {
+    display: flex;
+    list-style: none;
+}
+
+#listaProdutos {
+    display: flex;
+    width: 300px;
+    list-style: none;
+}
+
+#listaProdutos li {
+    margin: 10px;
+}
+
+h2 {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 5px;
+}
+
+p {
+    margin: 5px;
+}
+
+span {
+    font-weight: bold;
+    margin: 5px;
+}
+
+form {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+nav {
+    padding: 10px;
+}
+
+main {
+    display: flex;
+}
+
