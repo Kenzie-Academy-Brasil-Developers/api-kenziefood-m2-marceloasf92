@@ -1,7 +1,5 @@
-// import { VitrineModel } from "./src/models/Vitrine.js";
 import { VitrineController } from "./src/controllers/Vitrine.js"
-// import { db } from "./src/mock/db.js";
-import {filtros} from "./src/models/Filtros.js"
+import { Filtros } from "./src/models/Filtros.js"
 
 const response = await fetch(`https://kenzie-food-api.herokuapp.com/product`)
     .then(res => res.json())
@@ -14,32 +12,43 @@ VitrineController.criarTemplate(response)
 
 const nav = document.getElementById("filtros")
 const input = document.getElementById("input")
-const pesquisa = document.getElementById("pesquisa")
-// const campoPesquisa = document.querySelector('.campoPesquisa')
+// const pesquisa = document.getElementById("pesquisa")
+const campoPesquisa = document.querySelector('.campoPesquisa')
 
 
 nav.addEventListener("click", (e) => {
     let click = e.target
-
-    if(click.tagName === "BUTTON"){
-        if(click.id === "Todos"){
+    
+    if (click.tagName === "BUTTON") {
+        if (click.id === "Todos") {
             VitrineController.criarTemplate(response)
 
-        }else if(click.id === "Panificadora"){
-            VitrineController.criarTemplate(filtros.panificadora(response))
+        } else if (click.id === "Panificadora") {
+            VitrineController.criarTemplate(Filtros.panificadora(response))
 
-        }else if(click.id === "Frutas"){
-            VitrineController.criarTemplate(filtros.frutas(response))
-            
-        }else if(click.id === "Bebidas"){
-            VitrineController.criarTemplate(filtros.bebidas(response))
-            
+        } else if (click.id === "Frutas") {
+            VitrineController.criarTemplate(Filtros.frutas(response))
+
+        } else if (click.id === "Bebidas") {
+            VitrineController.criarTemplate(Filtros.bebidas(response))
+
         }
     }
 })
 
-pesquisa.addEventListener("Click", (e) => {
+campoPesquisa.addEventListener("keydown", () => {
+
     let valorBusca = input.value.toLowerCase()
+    console.log(valorBusca);
+
     valorBusca = valorBusca[0].toUpperCase() + valorBusca.substr(1)
-    VitrineController.criarTemplate(filtros.busca(valorBusca, response))
+    VitrineController.criarTemplate(Filtros.busca(valorBusca, response))
 })
+
+
+import { CarrinhoControl } from "./src/controllers/Carrinho.js";
+
+CarrinhoControl.add(response)
+
+CarrinhoControl.remover()
+

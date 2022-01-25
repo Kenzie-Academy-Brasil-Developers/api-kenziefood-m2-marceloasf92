@@ -4,7 +4,7 @@ class VitrineController {
     static criarTemplate(data) {
 
         const vitrinePrincipal = document.querySelector('.vitrinePrincipal')
-              vitrinePrincipal.innerHTML = ""
+        vitrinePrincipal.innerHTML = ""
 
         data.forEach(({ id, nome, preco, categoria, descricao, imagem }) => {
 
@@ -23,13 +23,13 @@ class VitrineController {
             <p>${descricao}</p>
             <div>
                 <span>R$ ${preco.toFixed(2)}</span>
-                <button id=${id}><img src=https://cdn-icons-png.flaticon.com/512/126/126510.png></button>
+                <button id=${id}></button>
             </div>`
 
-
+            /* <img src=https://cdn-icons-png.flaticon.com/512/126/126510.png> */ 
             listaProdutos.appendChild(li)
 
-            
+
 
 
         });
