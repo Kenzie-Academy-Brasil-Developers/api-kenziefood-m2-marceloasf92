@@ -4,7 +4,7 @@ class VitrineController {
     static criarTemplate(data) {
 
         const vitrinePrincipal = document.querySelector('.vitrinePrincipal')
-
+              vitrinePrincipal.innerHTML = ""
 
         data.forEach(({ id, nome, preco, categoria, descricao, imagem }) => {
 
