@@ -1,5 +1,4 @@
-import {db} from "../mock/db.js"
-
+// import {db} from "../mock/db.js"
 class VitrineModel {
     constructor({nome, preco, categoria, descricao, imagem}) {
         this.id = getMaxId() + 1;
@@ -10,19 +9,19 @@ class VitrineModel {
         this.imagem = imagem;
     }
 
-    getMaxId(){
-        let maxId = 0;
-        db.products.forEach(product => {
-            if (product.id > maxId) {
-                maxId = product.id
-            }
-        })
-        return maxId
-    }
+    // getMaxId(){
+    //     let maxId = 0;
+    //     db.products.forEach(product => {
+    //         if (product.id > maxId) {
+    //             maxId = product.id
+    //         }
+    //     })
+    //     return maxId
+    // }
 
-    salvarProduto(){
-        db.push(this)
-    }
+    // salvarProduto(){
+    //     db.push(this)
+    // }
     
 
     

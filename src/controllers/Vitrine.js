@@ -1,20 +1,17 @@
-// const db = require("../mock/db.json")
-
 class VitrineController {
 
-    // static obterProdutos() {
-    //     const db = Helpers.readData();
-    //     return db;
-    // }
 
     static criarTemplate(data) {
 
         const vitrinePrincipal = document.querySelector('.vitrinePrincipal')
-        const listaProdutos = document.createElement('ul')
-        listaProdutos.id = 'listaProdutos';
-        vitrinePrincipal.appendChild(listaProdutos)
+
 
         data.forEach(({ id, nome, preco, categoria, descricao, imagem }) => {
+
+            const listaProdutos = document.createElement('ul')
+            listaProdutos.id = 'listaProdutos';
+            vitrinePrincipal.appendChild(listaProdutos)
+
             const li = document.createElement("li")
 
             li.innerHTML = `
@@ -25,12 +22,16 @@ class VitrineController {
             <h2>${nome}</h2>
             <p>${descricao}</p>
             <div>
-                <span>${preco}</span>
-                <button id=${id}></button>
-            </div>
-        `
+                <span>R$ ${preco.toFixed(2)}</span>
+                <button id=${id}><img src=https://cdn-icons-png.flaticon.com/512/126/126510.png></button>
+            </div>`
 
-            vitrinePrincipal.appendChild(li)
+
+            listaProdutos.appendChild(li)
+
+            
+
+
         });
 
 
