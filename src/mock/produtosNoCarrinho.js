@@ -1,0 +1,4 @@
+const ProdutosNoCarrinho = []
+
+
+export { ProdutosNoCarrinho }

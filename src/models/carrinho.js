@@ -18,7 +18,6 @@ class Carrinho {
        criarPreco.innerText     = preco;
        criarCategoria.innerText = categoria;
        criarimagem.src          = imagem;
-       criarBtn.id = 257
 
 
        criarLi.appendChild(criarimagem);
@@ -29,14 +28,6 @@ class Carrinho {
        this.listaCarrinho.appendChild(criarLi);
 
     }
-
-    static remover(remover) {
-
-        remover.remove()
-        
-        
-    }
-
 }
 
 export { Carrinho }
