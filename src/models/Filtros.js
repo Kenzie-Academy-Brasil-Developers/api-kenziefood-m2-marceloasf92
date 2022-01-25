@@ -35,6 +35,8 @@ class Filtros {
     }
 
     static busca(valor, data) {
+        
+        console.log(valor);
 
         let produtosfiltrados = []
 
@@ -42,8 +44,11 @@ class Filtros {
             if(e.categoria.toLowerCase().includes(valor)){
                 return produtosfiltrados.push(e)
             }
+            if(e.nome.toLowerCase().includes(valor)){
+                return produtosfiltrados.push(e)
+            }
         })
-        console.log(produtosfiltrados);
+        // console.log(produtosfiltrados);
 
         // let result = data.find(e => e.categoria.toLowerCase().includes(valor))
         // produtosfiltrados.push(result)

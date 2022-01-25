@@ -45,6 +45,17 @@ campoPesquisa.addEventListener("keyup", (e) => {
 
 })
 
+campoPesquisa.addEventListener("keyup", (e) => {
+
+    console.log(e);
+    if (e.key.length === 1) {
+        let valorBusca = input.value.toLowerCase().trim()
+
+        Filtros.busca(valorBusca, response)
+    }
+
+})
+
 
 import { CarrinhoControl } from "./src/controllers/Carrinho.js";
 
