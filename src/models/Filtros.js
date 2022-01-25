@@ -36,27 +36,24 @@ class Filtros {
 
     static busca(valor, data) {
 
-        valor = valor.toLowerCase()
-        valor = valor[0].toUpperCase() + valor.substr(1).trim()
-
         let produtosfiltrados = []
 
+        data.map(function(e){
+            if(e.categoria.toLowerCase().includes(valor)){
+                return produtosfiltrados.push(e)
+            }
+        })
+        console.log(produtosfiltrados);
 
-        let result = data.find(e => e.categoria.includes(valor))
-        produtosfiltrados.push(result)
+        // let result = data.find(e => e.categoria.toLowerCase().includes(valor))
+        // produtosfiltrados.push(result)
 
-
-        // for (let i = 0; i < data.length; i++) {
-        //     if (data[i].categoria === valor) {
-        //         produtosfiltrados.push(data[i])
-        //     } else if (data[i].nome == valor) {
-        //         produtosfiltrados.push(data[i])
-        //     }
-        // }
-
-
+        if (produtosfiltrados.includes('undefined') || produtosfiltrados.length === 0) {
+            VitrineController.criarTemplate(data) 
+        }else{
             VitrineController.criarTemplate(produtosfiltrados)
-            produtosfiltrados = []
+        }
+
     }
 }
 

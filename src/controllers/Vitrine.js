@@ -5,8 +5,8 @@ class VitrineController {
 
         const vitrinePrincipal = document.querySelector('.vitrinePrincipal')
         vitrinePrincipal.innerHTML = ""
-        if(data !== undefined){
-            data.forEach(({ id, nome, preco, categoria, descricao, imagem }) => {
+
+        data.forEach(({ id, nome, preco, categoria, descricao, imagem }) => {
 
             const listaProdutos = document.createElement('ul')
             listaProdutos.id = 'listaProdutos';
@@ -26,15 +26,16 @@ class VitrineController {
                 <button id=${id}></button>
             </div>`
 
-            /* <img src=https://cdn-icons-png.flaticon.com/512/126/126510.png> */ 
+            /* <img src=https://cdn-icons-png.flaticon.com/512/126/126510.png> */
             listaProdutos.appendChild(li)
 
 
 
 
         });
-        }
-    
+
+
+
     }
 }
 

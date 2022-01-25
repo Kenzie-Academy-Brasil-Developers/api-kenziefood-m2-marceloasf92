@@ -18,7 +18,7 @@ const campoPesquisa = document.querySelector('.campoPesquisa')
 
 nav.addEventListener("click", (e) => {
     let click = e.target
-    
+
     if (click.tagName === "BUTTON") {
         if (click.id === "Todos") {
             VitrineController.criarTemplate(response)
@@ -37,9 +37,12 @@ nav.addEventListener("click", (e) => {
 })
 
 campoPesquisa.addEventListener("keyup", (e) => {
-    let valorBusca = input.value
+    if (e.key.length === 1) {
+        let valorBusca = input.value.toLowerCase().trim()
 
-       Filtros.busca(valorBusca, response)
+        Filtros.busca(valorBusca, response)
+    }
+
 })
 
 
