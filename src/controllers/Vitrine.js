@@ -2,7 +2,7 @@ class VitrineController {
 
 
     static criarTemplate(data) {
-
+        console.log(data);
         const vitrinePrincipal = document.querySelector('.vitrinePrincipal')
         vitrinePrincipal.innerHTML = ""
 

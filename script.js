@@ -1,18 +1,30 @@
 import { VitrineController } from "./src/controllers/Vitrine.js"
 import { Filtros } from "./src/models/Filtros.js"
+import { CarrinhoControl } from "./src/controllers/Carrinho.js";
 
-const response = await fetch(`https://kenzie-food-api.herokuapp.com/product`)
-    .then(res => res.json())
-    .then((res) => res)
-    .catch((error) => error);
+// const response = await fetch(`https://kenzie-food-api.herokuapp.com/product`)
+//     .then(res => res.json())
+//     .then((res) => res)
+//     .catch((error) => error);
 
-console.log(response);
+// console.log(response);
+
+const response =
+    await fetch('https://kenzie-food-api.herokuapp.com/my/product', {
+        method: "GET",
+        headers: {
+            Authorization: "Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MzQsImlhdCI6MTY0MzEzMjQ5MywiZXhwIjoxNjQzOTk2NDkzLCJzdWIiOiJbb2JqZWN0IFVuZGVmaW5lZF0ifQ.H13WaX2GhKvVReo-_fRzF81hNHUYx2Ed34cfIOHR1mA",
+            "Content-Type": "application/json",
+        },
+    })
+        .then(res => res.json())
+        .then((res) => res)
+        .catch((error) => error);
 
 VitrineController.criarTemplate(response)
 
 const nav = document.getElementById("filtros")
 const input = document.getElementById("input")
-const pesquisa = document.getElementById("pesquisa")
 const campoPesquisa = document.querySelector('.campoPesquisa')
 
 
@@ -64,9 +76,11 @@ campoPesquisa.addEventListener("keyup", (e) => {
 })
 
 
-import { CarrinhoControl } from "./src/controllers/Carrinho.js";
-
 CarrinhoControl.add(response)
 
 CarrinhoControl.remover()
+
+
+
+
 
