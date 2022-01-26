@@ -69,6 +69,14 @@ figcaption {
     margin: 10px;
 }
 
+#listaProdutos li div button{
+    width: 50px;
+    height: 50px;
+    background-image: url('https://cdn-icons-png.flaticon.com/512/126/126510.png');
+    background-size: 20px;
+    background-repeat: no-repeat;
+}
+
 h2 {
     font-size: 20px;
     font-weight: bold;

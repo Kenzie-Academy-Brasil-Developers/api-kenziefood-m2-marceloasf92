@@ -26,7 +26,7 @@ class VitrineController {
                 <button id=${id}></button>
             </div>`
 
-            /* <img src=https://cdn-icons-png.flaticon.com/512/126/126510.png> */
+            
             listaProdutos.appendChild(li)
 
 

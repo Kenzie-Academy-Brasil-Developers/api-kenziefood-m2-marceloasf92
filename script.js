@@ -48,8 +48,15 @@ campoPesquisa.addEventListener("keyup", (e) => {
 campoPesquisa.addEventListener("keyup", (e) => {
 
     console.log(e);
+
+
+    let valorBusca = input.value.toLowerCase().trim()
+
+    if (valorBusca === '') {
+
+        VitrineController.criarTemplate(response)
+    }
     if (e.key.length === 1) {
-        let valorBusca = input.value.toLowerCase().trim()
 
         Filtros.busca(valorBusca, response)
     }
