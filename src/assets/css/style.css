@@ -170,3 +170,64 @@ main {
     display: flex;
     justify-content: space-between;
 }
+
+/* Modal PopUp */
+
+.boxModal{
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0px;
+    left: 0px; 
+    align-items: center;
+    justify-content: center;
+    display: none; 
+}
+.mostrar{
+    display: flex;
+}
+#fechar{
+    margin: 10px 15px;
+    background: #ff0000;
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 18px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #FFFFFF;
+    border: #ff0000;
+    cursor: pointer;
+    border-radius: 100%;
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    bottom: 115px;
+}
+
+.modal{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background: #FFFFFF;
+    width: 60%;
+    min-width: 300px;
+    min-height: 550px;
+    height: 60%;
+    padding: 20px;
+    border-radius: 5px;
+}
+.modal form{
+    display: flex;
+    width: 100%;
+    align-items: stretch;
+    flex-direction: column;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+    height: 75%;
+}
+#submit{
+    margin: 10px;
+}
