@@ -17,7 +17,7 @@ class VitrineController {
             li.innerHTML = `
             <figure>
                 <img src="${imagem}" alt="${nome}">
-                <figcaption>${categoria}</figcaption>
+                <figcaption class="${categoria}">${categoria}</figcaption>
             </figure>
             <h2>${nome}</h2>
             <p>${descricao}</p>

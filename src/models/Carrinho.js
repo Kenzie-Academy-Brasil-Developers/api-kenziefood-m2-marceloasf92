@@ -21,13 +21,16 @@ class Carrinho {
 
 
        const criarimagem    = document.createElement('img');
-       const criarBtn       = document.createElement('button') 
+       const criarBtn       = document.createElement('button');
 
        criarNome.innerText      = nome;
        criarPreco.innerText     = preco;
        criarCategoria.innerText = categoria;
        criarimagem.src          = imagem;
 
+       criarBtn.className = 'btnCarrinho'
+       criarCategoria.className = 'categoriaCarrinho'
+       criarPreco.className =  'precoCarrinho'
 
        criarLi.appendChild(criarimagem);
        criarLi.appendChild(div);

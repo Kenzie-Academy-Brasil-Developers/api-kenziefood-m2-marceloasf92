@@ -13,23 +13,21 @@
 <body>
     <header>
         <div class='cabeçalho'>
-            <img
-                src='https://cdn.kenzie.academy/wp-content/uploads/prod/2020/07/31183511/Kenzie-Social-Media-Logo-01-e1595339622602.jpg'>
-            <div class="campoPesquisa">
-                <input id="input" type="text" placeholder="Pesquisar">
-                <button id="pesquisa">Pesquisa</button>
+            <img src='./src/assets/img/Kenzie-Food.png'>
+            <div class="cabeçalho__campoPesquisa campoPesquisa">
+                <input class="cabeçalho__input--style" id="input" type="text" placeholder="Pesquisar">
+                <button class="cabeçalho__button--position" id="pesquisa"></button>
             </div>
         </div>
     </header>
+
     <nav id='filtros'>
-        <ul>
-            <li><button id="Todos">Todos</button></li>
-            <li><button id="Panificadora"><img
-                        src="https://cdn-icons-png.flaticon.com/512/1140/1140055.png">Panificadora</button></li>
-            <li><button id="Frutas"><img src='https://cdn-icons-png.flaticon.com/512/2843/2843568.png'>Frutas</button>
-            </li>
-            <li><button id="Bebidas"><img
-                        src='https://as1.ftcdn.net/v2/jpg/02/89/84/28/1000_F_289842835_foemNCZSyjEA2D6qax49MJwy8nJIATng.jpg'>Bebidas</button>
+        <ul class="filtros">
+            <li><button class="filtros__categoria--tamanho filtros__categoria--todos" id="Todos">Todos</button></li>
+            <li><button class="filtros__categoria--tamanho filtros__categoria--corfundoP" id="Panificadora"><img src="/src/assets/img/bread.png">Panificadora</button></li>
+            <li><button class="filtros__categoria--tamanho  filtros__categoria--corfundoF" id="Frutas"><img src='/src/assets/img/fruits.png'>Frutas</button>
+            </li> 
+            <li><button class="filtros__categoria--tamanho filtros__categoria--corfundoB" id="Bebidas"><img src='/src/assets/img/wine.png'>Bebidas</button>
             </li>
         </ul>
     </nav>
@@ -39,13 +37,13 @@
         </section>
         <section class='carrinhoDeCompras'>
             <div class='carrinho'>
-                <img src='https://cdn-icons-png.flaticon.com/512/126/126510.png'>
-                <h2>Carrinho</h2>
+                <img src='/src/assets/img/cartIcon.png'>
+                <h2 class="carrinhoNome">Carrinho</h2>
             </div>
             <ul id='listaCarrinho'></ul>
             <div class='carrinhoVazio'>
                 <img
-                    src='https://w7.pngwing.com/pngs/900/247/png-transparent-shopping-bags-trolleys-computer-icons-online-shopping-shopping-bag-icon-retail-rectangle-shopping-bags-trolleys.png'>
+                    src='/src/assets/img/shopping-bag.png'>
                 <h3>Ops!</h3>
                 <p>Não tem nada por aqui.</p>
             </div>
