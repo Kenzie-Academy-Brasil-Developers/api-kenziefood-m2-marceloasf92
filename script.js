@@ -2,6 +2,8 @@ import { VitrineController } from "./src/controllers/Vitrine.js"
 import { Filtros } from "./src/models/Filtros.js"
 import { CarrinhoControl } from "./src/controllers/Carrinho.js";
 
+const vitrinePrincipal = document.querySelector('.vitrinePrincipal');
+
 // const response = await fetch(`https://kenzie-food-api.herokuapp.com/product`)
 //     .then(res => res.json())
 //     .then((res) => res)
@@ -124,9 +126,17 @@ const boxEditar = document.getElementById("boxEditar")
 const fecharbox = document.getElementById("fecharEdicao")
 const submitEdicao = document.getElementById("submitEdicao")
 const formEdicao = document.getElementById("formEdicao")
+let idProduto;
 
-edicaoButton.addEventListener("click", () => {
-    boxEditar.classList.add("mostrar")
+vitrinePrincipal.addEventListener("click", (e) => {
+    if (e.target.classList.contains('editarProdutoAPI')) {
+        boxEditar.classList.add("mostrar")
+
+        idProduto = e.target.id;
+    }
+
+
+
 })
 fecharbox.addEventListener("click", () => {
     boxEditar.classList.remove("mostrar")
@@ -149,10 +159,8 @@ async function postAPI(data) {
 }
 
 
-const vitrinePrincipal = document.querySelector('.vitrinePrincipal');
 async function deleteAPI(e) {
-    
-    console.log(e.target);
+
     if (e.target.classList.contains('deletarProdutoAPI')) {
         let id = Number(e.target.id)
         console.log(id);
@@ -172,6 +180,65 @@ async function deleteAPI(e) {
 
 }
 vitrinePrincipal.addEventListener('click', deleteAPI)
+
+
+submitEdicao.addEventListener("click", async (e) => {
+    e.preventDefault()
+
+
+    let data = {}
+    let elements = formEdicao.elements
+    
+
+    for (let i = 0; i < elements.length; i++) {
+        let item = elements[i];
+        if (item.name !== "") {
+            if (!!item.value) {
+                data[item.name] = item.value;
+
+            }
+        }
+    }
+
+    if (Object.values(data).length !== 0) {
+        patchAPI(data)
+        boxEditar.classList.remove("mostrar")
+        for (let i = 0; i < elements.length - 1; i++) {
+            elements[i].value = '';
+        }
+    }
+
+    
+
+
+
+
+
+
+
+})
+
+
+async function patchAPI(data) {
+    console.log(data);
+
+    await fetch(`https://kenzie-food-api.herokuapp.com/my/product/${idProduto}`, {
+        method: "PATCH",
+        headers: {
+            Authorization: "Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MzQsImlhdCI6MTY0MzEzMjQ5MywiZXhwIjoxNjQzOTk2NDkzLCJzdWIiOiJbb2JqZWN0IFVuZGVmaW5lZF0ifQ.H13WaX2GhKvVReo-_fRzF81hNHUYx2Ed34cfIOHR1mA",
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data)
+    })
+        .then(res => res.json())
+        .then((res) => res)
+        .catch((error) => error);
+
+    const response = await getAPI()
+    VitrineController.criarTemplate(response)
+}
+
+
 
 
 
