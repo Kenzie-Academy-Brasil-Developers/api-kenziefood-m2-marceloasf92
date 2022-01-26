@@ -35,10 +35,11 @@ const input = document.getElementById("input")
 const campoPesquisa = document.querySelector('.campoPesquisa')
 
 
-nav.addEventListener("click", (e) => {
+nav.addEventListener("click", async (e) => {
     let click = e.target
 
     if (click.tagName === "BUTTON") {
+        const response = await getAPI()
         if (click.id === "Todos") {
             VitrineController.criarTemplate(response)
 
@@ -55,28 +56,25 @@ nav.addEventListener("click", (e) => {
     }
 })
 
-campoPesquisa.addEventListener("keyup", (e) => {
-    if (e.key.length === 1) {
-        let valorBusca = input.value.toLowerCase().trim()
+// campoPesquisa.addEventListener("keyup", async (e) => {
+//     if (e.key.length === 1) {
+//         let valorBusca = input.value.toLowerCase().trim()
+//         const response = await getAPI()
+//         Filtros.busca(valorBusca, response)
+//     }
 
-        Filtros.busca(valorBusca, response)
-    }
+// })
 
-})
-
-campoPesquisa.addEventListener("keyup", (e) => {
-
-    console.log(e);
-
+campoPesquisa.addEventListener("keyup", async (e) => {
 
     let valorBusca = input.value.toLowerCase().trim()
 
     if (valorBusca === '') {
-
+        const response = await getAPI()
         VitrineController.criarTemplate(response)
     }
     if (e.key.length === 1) {
-
+        const response = await getAPI()
         Filtros.busca(valorBusca, response)
     }
 

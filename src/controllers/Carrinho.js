@@ -51,7 +51,7 @@ class CarrinhoControl {
         listaCarrinho.addEventListener('click', function (e) {
             let click = e.target
 
-            if (click.classList.contains('removerProduto')) {
+            if (click.classList.contains('btnCarrinho')) {
                 const idClicado = click.id
                 const acharProduto = CarrinhoControl.ProdutosNoCarrinho.filter(valor => valor.id == idClicado)
                 CarrinhoControl.ProdutosNoCarrinho.splice(CarrinhoControl.ProdutosNoCarrinho.indexOf(acharProduto[0]), 1);

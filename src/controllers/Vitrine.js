@@ -24,14 +24,10 @@ class VitrineController {
             <div>
                 <span>R$ ${preco.toFixed(2)}</span>
                 <button id=${id} class=adicionarProduto></button>
+                <button id=${id} class=deletarProdutoAPI></button>
+                <button id=${id} class=editarProdutoAPI></button>
             </div>
-            <div id=delete>
-                <button id=${id} class=deletarProdutoAPI>Deletar Produto API</button>
-            </div>
-            <div id=editar>
-                <button id=${id} class=editarProdutoAPI>Editar Produto API</button>
-            </div>
-            `
+                        `
 
 
             listaProdutos.appendChild(li)
