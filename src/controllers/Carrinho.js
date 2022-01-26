@@ -1,8 +1,19 @@
 import { Carrinho } from '/src/models/Carrinho.js'
+import {WriteController} from './WriteController.js'
 
 class CarrinhoControl {
 
     static ProdutosNoCarrinho = [];
+    static storage = localStorage.getItem('produtosNoCarrinho')
+
+    static iniciarCarrinho() {
+        const arr = JSON.parse(CarrinhoControl.storage)
+        if(!!CarrinhoControl.storage) {
+            CarrinhoControl.ProdutosNoCarrinho = [...arr]
+        }
+        console.log(arr)
+        console.log(CarrinhoControl.ProdutosNoCarrinho)
+    }
 
     static async add(data) {
 
@@ -24,8 +35,13 @@ class CarrinhoControl {
                 }
                 const idClicado = click.id
                 const pegarProduto = data.filter(produtos => produtos.id == idClicado)
+                console.log(pegarProduto)
                 CarrinhoControl.ProdutosNoCarrinho.push(pegarProduto[0])
-                Carrinho.criarCarrinho(pegarProduto[0])
+                //Carrinho.criarCarrinho(pegarProduto[0])
+                CarrinhoControl.ProdutosNoCarrinho.forEach(produtos => {
+                    Carrinho.criarCarrinho(produtos)
+                })
+                //console.log(CarrinhoControl.ProdutosNoCarrinho)
 
                 const total = CarrinhoControl.ProdutosNoCarrinho.reduce(function(acc, {preco}){
                     acc = acc + preco;
@@ -37,8 +53,8 @@ class CarrinhoControl {
                 
                 quantidadeP.innerText = CarrinhoControl.ProdutosNoCarrinho.length
             }
+            WriteController.execute()
         })
-
     }
 
     static remover() {
@@ -74,7 +90,7 @@ class CarrinhoControl {
 
                 }
             }
-
+            WriteController.execute()
         })
     }
 

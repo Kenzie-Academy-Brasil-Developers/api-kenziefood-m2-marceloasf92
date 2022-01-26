@@ -4,6 +4,9 @@ class Carrinho {
 
     static criarCarrinho(produto) {
 
+        console.log(Carrinho.listaCarrinho)
+        //Carrinho.listaCarrinho.innerHTML = ''
+
         listaCarrinho.style.display = 'block'
         //VERIFICAR ESSA FUNCIONABILIDADE DO DISPLAY
 

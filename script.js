@@ -1,5 +1,6 @@
 import { VitrineController } from "./src/controllers/Vitrine.js"
 import { Filtros } from "./src/models/Filtros.js"
+import {WriteController} from "./src/controllers/WriteController.js"
 
 const response = await fetch(`https://kenzie-food-api.herokuapp.com/product`)
     .then(res => res.json())
@@ -9,6 +10,8 @@ const response = await fetch(`https://kenzie-food-api.herokuapp.com/product`)
 console.log(response);
 
 VitrineController.criarTemplate(response)
+
+
 
 const nav = document.getElementById("filtros")
 const input = document.getElementById("input")
@@ -69,4 +72,8 @@ import { CarrinhoControl } from "./src/controllers/Carrinho.js";
 CarrinhoControl.add(response)
 
 CarrinhoControl.remover()
+
+WriteController.execute()
+
+CarrinhoControl.iniciarCarrinho()
 
