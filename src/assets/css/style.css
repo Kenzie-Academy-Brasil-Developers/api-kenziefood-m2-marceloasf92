@@ -14,7 +14,7 @@ main{
 
 header {
     display: flex;
-    padding: 10px;
+    padding: 10px 0px 21px 12px;
 }
 
 .cabeçalho {
@@ -22,7 +22,7 @@ header {
     flex-wrap: wrap;
     justify-content: space-between;
     width: 99%;
-    padding: 10px;
+    padding: 10px 0px 0px 10px
 }
 
 .cabeçalho__img--size {
@@ -34,7 +34,7 @@ header {
 .cabeçalho__campoPesquisa{
     display: flex;
    flex-direction: row;
-   width: 329px;
+   width: 338px;
 }
 .cabeçalho__input--style {
     width: 325px;
@@ -84,7 +84,9 @@ header {
 }
 .filtros {
     display: flex;
-    width: 97vw;
+   
+    width: 93.8vw;
+
     list-style: none;
     overflow-x: auto;
 
@@ -149,6 +151,7 @@ figcaption {
     list-style: none;
     width: 100vw;
     height: 470px;
+    margin-bottom: 20px;
     overflow-x: auto;
     flex-direction: row;
 }
@@ -161,8 +164,6 @@ figcaption {
     width: 300px;
     height: 369px;
     list-style: none;
-    margin-right: 23px;
-    
 }
 
 #listaProdutos li {
@@ -252,8 +253,9 @@ form {
 }
 
 nav {
-    padding: 10px;
-    margin-bottom: 50px;
+    padding: 0px 0px 0px 20.9px;
+    margin-bottom: 20px;
+    width: 93.8vw;
 }
 
 main {
