@@ -106,7 +106,6 @@ submit.addEventListener("click", async (e) => {
 
     for (let i = 0; i < elements.length; i++) {
         let item = elements[i];
-        // O "name" é um atributo HTML
         if (item.name !== "") {
             data[item.name] = item.value;
         }
@@ -150,12 +149,13 @@ async function postAPI(data) {
 }
 
 
-const deletarProdutoAPI = document.querySelector('.deletarProdutoAPI');
+const vitrinePrincipal = document.querySelector('.vitrinePrincipal');
 async function deleteAPI(e) {
     
-
+    console.log(e.target);
     if (e.target.classList.contains('deletarProdutoAPI')) {
         let id = Number(e.target.id)
+        console.log(id);
         await fetch(`https://kenzie-food-api.herokuapp.com/my/product/${id}`, {
             method: "delete",
             headers: {
@@ -168,11 +168,10 @@ async function deleteAPI(e) {
 
         const response = await getAPI()
         VitrineController.criarTemplate(response)
-        id = null;
     }
 
 }
-deletarProdutoAPI.addEventListener('click', deleteAPI)
+vitrinePrincipal.addEventListener('click', deleteAPI)
 
 
 
