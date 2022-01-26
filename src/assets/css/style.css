@@ -187,23 +187,23 @@ main {
 .mostrar{
     display: flex;
 }
-#fechar{
+.fechar{
     margin: 10px 15px;
-    background: #ff0000;
-    font-family: 'Poppins', sans-serif;
+    background: rgb(255, 0, 0);
+    font-family: Poppins, sans-serif;
     font-style: normal;
     font-weight: 600;
     line-height: 18px;
     letter-spacing: 0em;
     text-align: center;
-    color: #FFFFFF;
-    border: #ff0000;
+    color: rgb(255, 255, 255);
+    border: rgb(255, 0, 0);
     cursor: pointer;
     border-radius: 100%;
-    width: 25px;
-    height: 25px;
-    position: absolute;
-    bottom: 115px;
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    bottom: 11%;
 }
 
 .modal{
@@ -222,12 +222,59 @@ main {
 .modal form{
     display: flex;
     width: 100%;
-    align-items: stretch;
+    align-items: center;
     flex-direction: column;
     justify-content: space-around;
     flex-wrap: nowrap;
     height: 75%;
 }
-#submit{
+.modal h2{
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 17px;
+}
+.modal label{
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    width: 90%;
+}
+.modal input{
+    background-color: #F8F9FA;
+    height: 21px;
+    width: 90%;
+    left: 0px;
+    top: 0px;
+    border-radius: 30px;
+    border: 1.5px solid #F8F9FA;
+    padding: 5px;
+}
+.modal input:hover{
+    border: 1,5px solid #212529;
+}
+.modal textarea{
+    background-color: #F8F9FA;
+    height: 21px;
+    width: 90%;
+    left: 0px;
+    top: 0px;
+    border-radius: 30px;
+    border: 1.5px solid #F8F9FA;
+    padding: 5px;
+}
+.modal textarea:hover{
+    border: 1,5px solid #212529;
+}
+.submit{
     margin: 10px;
+    background-color: #FFE9EE;
+    width: 270px;
+    font-family: Poppins;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
 }

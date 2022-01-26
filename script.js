@@ -120,6 +120,19 @@ submit.addEventListener("click", async (e) => {
 
 })
 
+const edicaoButton = document.querySelector(".editarProdutoAPI")
+const boxEditar = document.getElementById("boxEditar")
+const fecharbox = document.getElementById("fecharEdicao")
+const submitEdicao = document.getElementById("submitEdicao")
+const formEdicao = document.getElementById("formEdicao")
+
+edicaoButton.addEventListener("click", () => {
+    boxEditar.classList.add("mostrar")
+})
+fecharbox.addEventListener("click", () => {
+    boxEditar.classList.remove("mostrar")
+})
+
 async function postAPI(data) {
     const response =
         await fetch('https://kenzie-food-api.herokuapp.com/my/product', {
@@ -160,4 +173,6 @@ async function deleteAPI(e) {
 
 }
 deletarProdutoAPI.addEventListener('click', deleteAPI)
+
+
 
