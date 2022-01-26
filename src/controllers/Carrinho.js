@@ -15,7 +15,7 @@ class CarrinhoControl {
             
             const click = e.target
 
-            if (click.tagName === "BUTTON") {
+            if (click.classList.contains('adicionarProduto')) {
                 counter++
                 if (counter === 1) {
                     const carrinhoVazio = document.querySelector('.carrinhoVazio')
@@ -51,7 +51,7 @@ class CarrinhoControl {
         listaCarrinho.addEventListener('click', function (e) {
             let click = e.target
 
-            if (click.tagName === 'BUTTON') {
+            if (click.classList.contains('removerProduto')) {
                 const idClicado = click.id
                 const acharProduto = CarrinhoControl.ProdutosNoCarrinho.filter(valor => valor.id == idClicado)
                 CarrinhoControl.ProdutosNoCarrinho.splice(CarrinhoControl.ProdutosNoCarrinho.indexOf(acharProduto[0]), 1);
