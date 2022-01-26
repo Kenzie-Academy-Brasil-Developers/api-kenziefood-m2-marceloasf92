@@ -80,7 +80,32 @@ CarrinhoControl.add(response)
 
 CarrinhoControl.remover()
 
+const addProduto = document.getElementById("addProduto")
+const boxPopUp = document.getElementById("boxPopUp")
+const fecharPopUp = document.getElementById("fechar")
+const submit = document.getElementById("submit")
+const formProduto = document.getElementById("formProduto")
+
+addProduto.addEventListener("click", () => {
+    boxPopUp.classList.add("mostrar")
+})
+fecharPopUp.addEventListener("click", () => {
+    boxPopUp.classList.remove("mostrar")
+})
+submit.addEventListener("click", (e) => {
+    e.preventDefault()
+    let data = {};
+
+    const elements = formProduto.elements;
 
 
-
-
+    for (let i = 0; i < elements.length; i++) {
+        let item = elements[i];
+        // O "name" é um atributo HTML
+        if (item.name !== "") {
+            data[item.name] = item.value;
+        }
+    }
+ console.log(formProduto.elements[0].value)
+ console.log(data)
+})
