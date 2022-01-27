@@ -2,7 +2,7 @@ class VitrineController {
 
 
     static criarTemplate(data) {
-
+        console.log(data);
         const vitrinePrincipal = document.querySelector('.vitrinePrincipal')
         vitrinePrincipal.innerHTML = ""
 
@@ -17,16 +17,19 @@ class VitrineController {
             li.innerHTML = `
             <figure>
                 <img src="${imagem}" alt="${nome}">
-                <figcaption>${categoria}</figcaption>
+                <figcaption class="${categoria}">${categoria}</figcaption>
             </figure>
             <h2>${nome}</h2>
             <p>${descricao}</p>
             <div>
                 <span>R$ ${preco.toFixed(2)}</span>
-                <button id=${id}></button>
-            </div>`
+                <button id=${id} class=adicionarProduto></button>
+                <button id=${id} class=deletarProdutoAPI></button>
+                <button id=${id} class=editarProdutoAPI></button>
+            </div>
+                        `
 
-            
+
             listaProdutos.appendChild(li)
 
 
