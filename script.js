@@ -105,8 +105,6 @@ submit.addEventListener("click", async (e) => {
         }
     }
 
-    console.log(data);
-
     await postAPI(data)
     const response = await getAPI()
     VitrineController.criarTemplate(response)
@@ -155,7 +153,6 @@ async function deleteAPI(e) {
 
     if (e.target.classList.contains('deletarProdutoAPI')) {
         let id = Number(e.target.id)
-        console.log(id);
         await fetch(`https://kenzie-food-api.herokuapp.com/my/product/${id}`, {
             method: "delete",
             headers: {
@@ -202,7 +199,6 @@ submitEdicao.addEventListener("click", async (e) => {
 
 
 async function patchAPI(data) {
-    console.log(data);
 
     await fetch(`https://kenzie-food-api.herokuapp.com/my/product/${idProduto}`, {
         method: "PATCH",
