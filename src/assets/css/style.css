@@ -121,6 +121,7 @@ header {
 
 .filtros__categoria--tamanho:hover {
     border: 2px solid black;
+    cursor: pointer;
 }
 
 .filtros__categoria--tamanho img {
