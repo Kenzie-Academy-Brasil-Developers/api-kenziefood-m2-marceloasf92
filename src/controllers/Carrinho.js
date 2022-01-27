@@ -57,7 +57,6 @@ class CarrinhoControl {
                 }
                 const idClicado = click.id
                 const pegarProduto = data.filter(produtos => produtos.id == idClicado)
-                console.log(pegarProduto)
                 CarrinhoControl.ProdutosNoCarrinho.push(pegarProduto[0])
                 Carrinho.criarCarrinho(pegarProduto[0])
 

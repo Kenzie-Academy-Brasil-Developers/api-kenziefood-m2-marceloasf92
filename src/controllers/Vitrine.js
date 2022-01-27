@@ -2,7 +2,6 @@ class VitrineController {
 
 
     static criarTemplate(data) {
-        console.log(data);
         const vitrinePrincipal = document.querySelector('.vitrinePrincipal')
         vitrinePrincipal.innerHTML = ""
 
@@ -27,18 +26,9 @@ class VitrineController {
                 <button id=${id} class=deletarProdutoAPI></button>
                 <button id=${id} class=editarProdutoAPI></button>
             </div>
-                        `
-
-
+            `
             listaProdutos.appendChild(li)
-
-
-
-
         });
-
-
-
     }
 }
 

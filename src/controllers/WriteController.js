@@ -1,4 +1,3 @@
-// { writeFileSync, readFileSync } = require("fs")
 import { CarrinhoControl } from "./Carrinho.js"
 
 class WriteController {

@@ -177,10 +177,8 @@ vitrinePrincipal.addEventListener('click', deleteAPI)
 submitEdicao.addEventListener("click", async (e) => {
     e.preventDefault()
 
-
     let data = {}
     let elements = formEdicao.elements
-
 
     for (let i = 0; i < elements.length; i++) {
         let item = elements[i];
@@ -199,14 +197,6 @@ submitEdicao.addEventListener("click", async (e) => {
             elements[i].value = '';
         }
     }
-
-
-
-
-
-
-
-
 
 })
 
@@ -229,9 +219,6 @@ async function patchAPI(data) {
     const response = await getAPI()
     VitrineController.criarTemplate(response)
 }
-
-
-
 
 
 WriteController.execute()

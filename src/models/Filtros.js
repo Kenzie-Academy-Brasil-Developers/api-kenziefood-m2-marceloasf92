@@ -48,10 +48,6 @@ class Filtros {
                 return produtosfiltrados.push(e)
             }
         })
-        // console.log(produtosfiltrados);
-
-        // let result = data.find(e => e.categoria.toLowerCase().includes(valor))
-        // produtosfiltrados.push(result)
 
         if (produtosfiltrados.includes('undefined') || produtosfiltrados.length === 0) {
             VitrineController.criarTemplate(data) 
