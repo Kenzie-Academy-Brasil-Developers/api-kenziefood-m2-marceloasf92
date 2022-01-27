@@ -22,6 +22,7 @@ class Carrinho {
         const criarimagem = document.createElement('img');
         const criarBtn = document.createElement('button')
         criarBtn.classList.add('removerProduto')
+        criarBtn.id = id
 
         criarNome.innerText = nome;
         criarPreco.innerText = `R$ ${preco.toFixed(2)}`;

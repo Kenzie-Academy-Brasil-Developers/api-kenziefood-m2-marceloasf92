@@ -85,19 +85,21 @@ class CarrinhoControl {
             let click = e.target
 
             if (click.classList.contains('btnCarrinho')) {
+
                 const idClicado = click.id
                 const acharProduto = CarrinhoControl.ProdutosNoCarrinho.filter(valor => valor.id == idClicado)
                 CarrinhoControl.ProdutosNoCarrinho.splice(CarrinhoControl.ProdutosNoCarrinho.indexOf(acharProduto[0]), 1);
-                const a = click.parentNode.remove()
 
-                const total = CarrinhoControl.ProdutosNoCarrinho.reduce(function (acc, { preco }) {
-                    acc = acc + preco;
+                let total = CarrinhoControl.ProdutosNoCarrinho.reduce(function (acc, { preco }) {
+                        acc = acc + preco;
                     return acc;
                 }, 0)
-                totalP.innerText = `R$ ${total.toFixed(2)}`
+
+                totalP.innerText = `R$ ${total}`
 
                 quantidadeP.innerText = CarrinhoControl.ProdutosNoCarrinho.length
 
+                const a = click.parentNode.remove()
                 if (CarrinhoControl.ProdutosNoCarrinho.length === 0) {
                     const carrinhoVazio = document.querySelector('.carrinhoVazio')
                     carrinhoVazio.style.display = "initial"
