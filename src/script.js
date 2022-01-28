@@ -89,8 +89,12 @@ addProduto.addEventListener("click", () => {
     boxPopUp.classList.add("mostrar")
 })
 fecharPopUp.addEventListener("click", () => {
+
     boxPopUp.classList.remove("mostrar")
+
 })
+
+
 submit.addEventListener("click", async (e) => {
     e.preventDefault()
     let data = {};
@@ -102,7 +106,12 @@ submit.addEventListener("click", async (e) => {
         let item = elements[i];
         if (item.name !== "") {
             data[item.name] = item.value;
+            item = '';
         }
+    }
+
+    for (let i = 0; i < elements.length; i++) {
+        elements[i].value = '';
     }
 
     await postAPI(data)
