@@ -72,7 +72,7 @@ header {
     height: 10px;
     border-radius: 50%;
     border-style: none;
-    background-image: url('/src/assets/img/search.png');
+    background-image: url('../img/search.png');
     background-repeat: no-repeat;
     background-position-x: 18px;
     background-color: var(--primary-50);
@@ -88,7 +88,7 @@ header {
     height: 10px;
     border-radius: 50%;
     border-style: none;
-    background-image: url('/src/assets/img/SearchClick.png');
+    background-image: url('../img/SearchClick.png');
     background-color: #FF2253;
     background-size: 10px;
     background-repeat: no-repeat;
@@ -238,7 +238,7 @@ figcaption {
     width: 35px;
     height: 35px;
     top: 15px;
-    background-image: url('/src/assets/img/cart.png');
+    background-image: url('../img/cart.png');
     background-size: 11px;
     background-repeat: no-repeat;
     background-position-x: 12px;
@@ -250,7 +250,7 @@ figcaption {
 
 #listaProdutos li div button:hover {
     background-color: #4ACA94;
-    background-image: url('/src/assets/img/CartClick.png');
+    background-image: url('../img/CartClick.png');
     cursor: pointer;
 }
 
@@ -391,7 +391,7 @@ main {
 }
 
 .btnCarrinho {
-    background-image: url('/src/assets/img/trash.png');
+    background-image: url('../img/trash.png');
     background-size: 12px;
 
     background-repeat: no-repeat;
@@ -407,7 +407,7 @@ main {
 .btnCarrinho:hover {
     cursor: pointer;
     background-color: red;
-    background-image: url('/src/assets/img/trash2.png');
+    background-image: url('../img/trash2.png');
     background-size: 12px;
 }
 
@@ -424,7 +424,7 @@ main {
     top: -24px;
     left: 21px;
     font-size: 14px;
-    background-image: url('/src/assets/img/bread.png');
+    background-image: url('../img/bread.png');
     background-repeat: no-repeat;
     background-position-x: 6px;
     background-position-y: 6px;
@@ -445,7 +445,7 @@ main {
     top: -24px;
     left: 21px;
     font-size: 14px;
-    background-image: url('/src/assets/img/wine.png');
+    background-image: url('../img/wine.png');
     background-repeat: no-repeat;
 }
 
@@ -464,14 +464,14 @@ main {
     top: -24px;
     left: 21px;
     font-size: 14px;
-    background-image: url('/src/assets/img/fruits.png');
+    background-image: url('../img/fruits.png');
 }
 
 #listaProdutos li div .deletarProdutoAPI {
     width: 35px;
     height: 35px;
     top: 15px;
-    background-image: url('/src/assets/img/delete.png');
+    background-image: url('../img/delete.png');
     background-size: 11px;
     background-repeat: no-repeat;
     background-position-x: 12px;
@@ -482,7 +482,7 @@ main {
 }
 
 #listaProdutos li div .deletarProdutoAPI:hover {
-    background-image: url('/src/assets/img/deletehover.png');
+    background-image: url('../img/deletehover.png');
     background-color: red;
     cursor: pointer;
 }
@@ -502,7 +502,7 @@ main {
 }
 
 #listaProdutos li div .editarProdutoAPI:hover {
-    background-image: url('/src/assets/img/pencilhover.png');
+    background-image: url('../img/pencilhover.png');
     background-color: yellow;
     cursor: pointer;
 }
