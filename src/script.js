@@ -1,7 +1,7 @@
-import { VitrineController } from "./src/controllers/Vitrine.js"
-import { Filtros } from "./src/models/Filtros.js"
-import { WriteController } from "./src/controllers/WriteController.js"
-import { CarrinhoControl } from "./src/controllers/Carrinho.js";
+import { VitrineController } from "./controllers/Vitrine.js"
+import { Filtros } from "./models/Filtros.js"
+import { WriteController } from "./controllers/WriteController.js"
+import { CarrinhoControl } from "./controllers/Carrinho.js";
 
 const vitrinePrincipal = document.querySelector('.vitrinePrincipal');
 

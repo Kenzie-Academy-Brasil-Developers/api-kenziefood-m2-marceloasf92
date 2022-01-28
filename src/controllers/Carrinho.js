@@ -95,7 +95,7 @@ class CarrinhoControl {
                     return acc;
                 }, 0)
 
-                totalP.innerText = `R$ ${total}`
+                totalP.innerText = `R$ ${total.toFixed(2)}`
 
                 quantidadeP.innerText = CarrinhoControl.ProdutosNoCarrinho.length
 
