@@ -1,5 +1,5 @@
-import { Carrinho } from '/src/models/Carrinho.js'
-import { WriteController } from './WriteController.js'
+import { Carrinho } from './src/models/Carrinho.js'
+import { WriteController } from '../controllers/WriteController.js'
 
 class CarrinhoControl {
 

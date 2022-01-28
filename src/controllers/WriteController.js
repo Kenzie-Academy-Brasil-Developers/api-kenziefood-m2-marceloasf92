@@ -1,4 +1,4 @@
-import { CarrinhoControl } from "./Carrinho.js"
+import { CarrinhoControl } from "../controllers/Carrinho.js"
 
 class WriteController {
     static execute() {
