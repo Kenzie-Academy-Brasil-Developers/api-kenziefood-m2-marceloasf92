@@ -4,7 +4,7 @@ class Carrinho {
 
     static criarCarrinho(produto) {
 
-        listaCarrinho.style.display = 'block'
+        Carrinho.listaCarrinho.style.display = 'block'
 
         const { id, nome, preco, categoria, imagem } = produto;
 
@@ -36,7 +36,7 @@ class Carrinho {
         criarLi.appendChild(criarimagem);
         criarLi.appendChild(div);
         criarLi.appendChild(criarBtn)
-        this.listaCarrinho.appendChild(criarLi);
+        Carrinho.listaCarrinho.appendChild(criarLi);
 
     }
 }

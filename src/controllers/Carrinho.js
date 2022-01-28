@@ -1,4 +1,4 @@
-import { Carrinho } from './src/models/Carrinho.js'
+import { Carrinho } from '../models/Carrinho.js'
 import { WriteController } from '../controllers/WriteController.js'
 
 class CarrinhoControl {
