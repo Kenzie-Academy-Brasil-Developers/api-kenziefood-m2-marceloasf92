@@ -527,10 +527,11 @@ main {
         border-radius: 50%;
         display: flex;
     }
+    
 
     #addProduto:hover {
         cursor: pointer;
-        background-image: url('../../assets/img/addplus2.png');
+        background-image: url('src/assets/img/addplus.png');
         background-color: green;
     }
 
