@@ -530,7 +530,7 @@ main {
 
     #addProduto:hover {
         cursor: pointer;
-        background-image: url('../img/addplus2.png');
+        background-image: url('../../assets/img/addplus2.png');
         background-color: green;
     }
 
