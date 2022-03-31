@@ -27,7 +27,6 @@ async function getAPI() {
     .then((res) => res.json())
     .then((res) => res)
     .catch((error) => error);
-  console.log(response);
   return response;
 }
 
